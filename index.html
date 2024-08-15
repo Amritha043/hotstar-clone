@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disney+ Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body style=" background: #0c111b;">
+    <nav class="navbar">
+      <div class="profile">
+        <div class="imgbox">
+          <a class="" target="_self" data-testid="link" tabindex="0" href="/in/paywall"><img alt="Disney+ Hotstar" src="https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg" class="" aria-hidden="false"></a>        </div>
+      </div>
+      
+      <a class="" href=""></a>
+
+      
+    </nav>
+    <section class="video-slider">
+      <div class="slider-container">
+          <div class="slider">
+              <div class="slide">
+                  <video autoplay muted loop>
+                      <source src="./image1/Disney's Encanto _ Official Trailer.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+              <div class="slide">
+                  <video autoplay muted loop>
+                      <source src="./image1/Marvel Studios' Avengers_ Endgame - Official Trailer.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+              <div class="slide">
+                  <video autoplay muted loop>
+                      <source src="video3.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+              <input type="radio" name="slider" id="slide-1" checked>
+<input type="radio" name="slider" id="slide-2">
+<input type="radio" name="slider" id="slide-3">
+
+              <div class="navigation">
+                <label for="slide-1" class="prev">❮</label>
+                <label for="slide-2" class="next">❯</label>
+            </div>
+            
+          </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <div class="navigation">
+          <button class="prev">❮</button>
+          <button class="next">❯</button>
+      </div>
+  </section>
+    <div id="video-card-container">
+      <div class="video-card">
+        <img src="./image1/1.png" class="video-card-image" alt="" />
+        <video class="card-video"  autoplay muted loop ><source type="video/mp4" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/qh3yh_1587393133132"></video>     
+      </div>
+        <div class="video-card">
+        <img src="data:image/png;base64,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" class="video-card-image" alt="" />
+        <video class="card-video"  autoplay muted loop ><source type="video/mp4" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/a6lr0r_1587393331483"></video>
+      </div>
+      <div class="video-card">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAB1CAMAAAAMXk8mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGhUExURf/////+/v/9/f76+/73+P709f3v8f3r7fzp6/zk5/zg4/vc4Pva3frW2vrT1/rQ1fnL0PjFy/jAx/e6wfe1vfaxufars/WosfWkrfShq/SapPOVoPKQnPKPmvKNmfKNmPKKlvGHk/GEkfGCjvF9i/B5h+92hO9yge9tfO5od+1icu1eb+xcbOxbbOxVZutSY+tOYOpKXOpHWupEV+k/U+k7T+g2SugwRecsQecoPuYoPuYlO+YgN+UdNOUXL+QRKeQMJOMJIuMFH+IAGuAAGrMLJawNJ6kNJ6EPKX8WL34ULXkVLVsgOXUVLW0XLiYzUCYyTyYyTiUyTiUyTSUxTSQxTSQxTCQwTCQwSyMwSyMwSiMvSiMvSSIvSSIuSSIuSCIuRyoqQyItRyEtRyEtRkAgNyEsRSAsRSAsRCkoQCArRCArQx8rQx8rQignPh8qQh8qQR4qQR4pQR4pQCclPB0pPx0oPx0oPh8mPBwnPhwnPRwnPBwmPBsmPBsmOxslOholOholORokORokOBkkOBkkNxkjNxkjNhgjNhgiNhgiNQGM/3cAAAcvSURBVHja7ZmJV9tGEMaHm3AfwRgILRAC4TIQ7jhg7G3Slja00CO0DaZpWkg5mkIKrg1pIBhM+1f3aWcl7cqyLG9sjn3+3iPfHpJmfkEa7Qr4SjnB18pJRaSl5SUq05ZT2ZIrS6s011j+sCyWlmBZOeWRbijSN4K5ltNp1jkXIeTDw7fKKY90A5G+y525UVYiwffKKY90I5CeKSdYWVl5tkLlZG70LHeWUXhYUU55pBuB9INygh+VE/yknPJINwLpuXLKI90IpNXV1dXnq6ucWbrp7LnVVlMdIkwnK1vhIbwWXguHw2hGOxwWxrnpjE28Bg6uhXlzG95lFrCmnPJIeaSrQfpZOVmQfsnUsqushIeXyklFpF9d6KXFXnz25FMpPXn8+Il7Pf7SPnwac4Vk1YtPyKXoc5nk8kjKI/nHqSZoZ2qCyq+1Jx6gQtp4f19f39DI5BweRccDWnNuzKJ5P7XgByOtS4ghfQxURTSJMux4tXY5tmGaEHKXtQuq7wcJaaXtYe2gXrBoup3aQw5JJrl12KBaN219Y93ONjgTkWjmc2AiBfQkhzkkAKiZId200aOd3eYCyT68YesbvOmCDQlZkHyEkHEOaVJP8p6IBGUzA9RbtbNvu0GSUTaQugkhfRzSoJ5kiwUJbvmoNWpnV+UM6ZWELEheS9ugqLciQS39t4IQEirWWtW3HJFkknuVDaQ67jbSkJqNG81Aqm8o5MC0gjKLv8dK7d/CZq/X653NGtImNtxbElIJIaSSQ6rVUy8I6EgDZLSYY/LrD9+9SrNmklRI1vAWWadhU0IWJJglwUIOqcRIfdJEIh0c0igh/VgTnZFkktuELapN0zZ12xR6vP1uQRoj02AizZqpD3BIj7hb7z4hXbQx44zkmMUmZm2YTgDbW1vb2LM1W1mR7hMfhzRGs6S5dnFIxr0JAO2EeOlRoTRIKYRJb5u2xRlsS8iK1MZeoYhE63kFrREeHqnBRGoipE7zKuKMJJNcdpAa8f+cIdHM6ilkLY9UZyJVswVU07VFqjDT9bJ67qW3YknIRAqaVQNKQgH6ZHXkBGln5/UOla3Zy4pUMF/CIdFlQeckq4UGEj5upY04PkWtnz1gZeXl5eUPk5F2ZASvJWRFghEwkYJFmvcFCrAW6kjBanyKOqmND1Ob4GuGzepBJrnX2UFq4pBm2JunlJLpSI/wtwO9uADsx61F4PoiAYc0wjYcNVitEamUvZTKAnjHddGtRTnJCdKfEnJE6qGrtgBWiduWZWsPW2c0019aQxqkBccsdlMY7EpIQKphGRUyJLpxLWVbvEoRqS7EIOqq2L7JGUkmuV0ppD94JH3t1saQ6iknIfewPPNIldoHCPrcFRawdRGuxKf8fr8/lCukvd09vcH3hWEBaYA9Jn0MqRxvODKEizgeqUY7q9PsPyDO76UF+/BpDPYkJCCN4i6ueAyR8B3apu8eRhCpjN6eBbP8nld7a6VBkkluD95ISETC8lyDCF58xVY0NOCCoheRBucKsaYTMmWuIUg6JJnk3mQBCR+mZoY0IFbAVkQawpreRIi5taK74euJhBDdDKlLRGrQkWi+JUF+k+G9tkh4J/kYkkdEuqUjjbDNIit5+jexXCDtS0hEwkXdNEOqFZEK7jCkQBHb+5klb1hHKhz0+Xy+eUTqGRwcHJxHJJnk9uHg4GD/YP8gIxORiLYgLQ4hUjNdkxd7PB4PfqirZ0j4vqriS96MuNWdaTfbjxDJdU77uh0gUsb6S0Ty0E0dIuHn8AbrR+8h/WOD3yx5xaH0SDLKBlI33ZKPcwRt2vSoiDSuf0iZLzK2trlBilCLZGQWJG3vc1dA6qV/qxGRcFfbaGJ43CFlkJqOJCELkp9+6ueRRojxidhAIvSVXBw0Sl5XeiSZ5CIfgjTaqekhIZ0dHbPE/5Ep/PtY9x1Dk4QQX0tLS2v7LCEjHVST9IHrNDQ3bB4fuCKknEsSKRqNRqKRqGARwaJJdmlI9uH5DCMWi0YjEJPQpSHJJBfLI6H+Xlz4Int6uvh0cXHxafLEwm+Xh3S9BYeHscNYLGbYoW7aCHZpM2aOHMawlWS2E9y1Y3gdwyxzqcMfZhIeDpUTHDnp7dGVSi48vE2to5RDR45z4slHyUPu5D6EOAhvlRP8o5zySHmkq0F6p5xURDp2pXf2JvZdnSIlV+H1a8OxcoKT4+OTY/qDdiL0aJczpznTjp3sxGLHjiYRHk6Uk5JI71PqxL6fC3MT3m0W8F45walygvhpPH6q/QgW1+wULa7bKQ6apo3SeVfGhYgL5hz+1Dl8chYQV04qIp1pisdNi/MW5ywu9MxBeuwZvYJrixt2Zm/JkQw7S8pJvDacnafXWbKd2ZnTkeduLCvh4Vw55ZFuBFLiInGRSCQSFxfMErwlBBPm9BMTdnZhaxcOc7ZZSIWHC+WkItK/ygn+U055pDzSleh/h5bojmMThXEAAAAASUVORK5CYII=" class="video-card-image" alt="" />
+        <video class="card-video"  autoplay muted loop><source type="video/mp4" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/1on5cf_1587393232549"></video>      </div>
+      <div class="video-card">
+        <img src="data:image/png;base64,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" class="video-card-image" alt="" />
+        <video class="card-video"  autoplay muted loop><source type="video/mp4" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/utwmfd_1587393376512"></video>
+      </div>
+      <div class="video-card">
+        <img src="data:image/png;base64,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" class="video-card-image" alt="" />
+        <video class="card-video"  autoplay muted loop><source type="video/mp4" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/ojerhm_1587393280208"></video>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <video class="card-video"  autoplay muted loop><source type="video/mp4" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/qc9clm_1669284974594"></video>      </div>
+    </div>
+    <h1 class="title">Recommended For You</h1>
+    <div class="container ms-0 d-flex">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card popover-wrapper " style="width: 13rem;" tabindex="0">
+                  <img src="./image1/mulan.png" class="card-img-top" alt="Mulan">
+  
+                  <!-- Popover content -->
+                  <div class="popover-content">
+                      <div class="popover-card">
+                          <img src="https://i.pinimg.com/474x/e7/4f/dd/e74fdded42af96d8f90ed96c31943c2f.jpg" alt="Popover Image">
+                          <a href="#" class="btn btn-light btn-md">Watch now</a>
+                          <p class="">This is some text within the popover.</p>
+                         
+                      </div>
+                  </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card popover-wrapper " style="width: 13rem;" tabindex="0">
+            <img style="height: 275px;" src="https://i.pinimg.com/474x/c8/06/ad/c806adbd18314d483fedea59e0025394.jpg" class="card-img-top" alt="Mulan">
+  
+            <!-- Popover content -->
+            <div class="popover-content">
+                <div class="popover-card">
+                    <img src="https://i.pinimg.com/474x/e7/4f/dd/e74fdded42af96d8f90ed96c31943c2f.jpg" alt="Popover Image">
+                    <a href="#" class="btn btn-light btn-md">Watch now</a>
+                    <p class="">This is some text within the popover.</p>
+                   
+                </div>
+            </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card popover-wrapper" style="width: 13rem;height: 275px;" tabindex="0">
+            <img src="https://i.pinimg.com/474x/97/92/15/9792154bb86de51a8212e13f3f890a8d.jpg" class="card-img-top" alt="Mulan">
+
+            <!-- Popover content -->
+            <div class="popover-content">
+                <div class="popover-card">
+                    <img src="https://i.pinimg.com/474x/e7/4f/dd/e74fdded42af96d8f90ed96c31943c2f.jpg" alt="Popover Image">
+                    <a href="#" class="btn btn-light btn-md">Watch now</a>
+                    <p class="">This is some text within the popover.</p>
+                   
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+      <div class="card popover-wrapper " style="width: 13rem;height: 275px;" tabindex="0">
+          <img src="https://i.pinimg.com/474x/bb/fd/17/bbfd1758c7af612cb8250c596249d0fc.jpg" class="card-img-top" alt="Mulan">
+
+          <!-- Popover content -->
+          <div class="popover-content">
+              <div class="popover-card">
+                  <img src="https://i.pinimg.com/474x/e7/4f/dd/e74fdded42af96d8f90ed96c31943c2f.jpg" alt="Popover Image">
+                  <a href="#" class="btn btn-light btn-md">Watch now</a>
+                  <p class="">This is some text within the popover.</p>
+                 
+              </div>
+          </div>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+      <div class="card popover-wrapper " style="width: 13rem;height: 275px;" tabindex="0">
+          <img src="https://i.pinimg.com/474x/b4/da/9d/b4da9d147402b30fd285846e14d8b5e8.jpg" class="card-img-top" alt="Mulan">
+
+          <!-- Popover content -->
+          <div class="popover-content">
+              <div class="popover-card">
+                  <img src="https://i.pinimg.com/474x/e7/4f/dd/e74fdded42af96d8f90ed96c31943c2f.jpg" alt="Popover Image">
+                  <a href="#" class="btn btn-light btn-md">Watch now</a>
+                  <p class="">This is some text within the popover.</p>
+                 
+              </div>
+          </div>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+      <div class="card popover-wrapper " style="width: 13rem;height: 275px;" tabindex="0">
+          <img src="https://i.pinimg.com/474x/f6/89/b7/f689b76c9f19f9f83d69959540d62ad9.jpg" class="card-img-top" alt="Mulan">
+
+          <!-- Popover content -->
+          <div class="popover-content">
+              <div class="popover-card">
+                  <img src="https://i.pinimg.com/474x/e7/4f/dd/e74fdded42af96d8f90ed96c31943c2f.jpg" alt="Popover Image">
+                  <a href="#" class="btn btn-light btn-md">Watch now</a>
+                  <p class="">This is some text within the popover.</p>
+                 
+              </div>
+          </div>
+  </div>
+</div>
+</div>
+</div>
+      <div class="card-container">
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 1.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Loki</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src=""" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Mulan</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 3.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">The Falcon And The Winter Soldier</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 4.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Avengers:Endgame</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 5.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Thor Ragnarok</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 6.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Avengers</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 7.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Pirates Of The Carribean:Salazar's Revenge</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 8.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Soul</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 9.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Raya And The Last Dragon</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 10.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Luca</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 11.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Ford Vs Farrari</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card movies_posterList" src="images/poster 12.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">X-man: Dark Pheonix</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="title">Popular Shows</h1>
+    <div class="movies-list">
+      <button class="pre-btn" title="btn">
+        <img src="images/pre.png" alt="" />
+      </button>
+      <button class="nxt-btn" title="btn">
+        <img src="images/nxt.png" alt="" />
+      </button>
+      <div class="card-container">
+        <div class="card">
+          <img src="images/poster 12.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">X-man: Dark Pheonix</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 11.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Ford Vs Farrari</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 10.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Luca</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 9.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Raya And The Last Dragon</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 8.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Soul</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 7.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Pirates Of The Carribean:Salazar's Revenge</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 6.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Avengers</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 5.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Thor Ragnarok</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 4.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Avengers:Endgame</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 3.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">The Falcon And The Winter Soldier</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 2.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Mulan</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/poster 1.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h2 class="name">Loki</h2>
+            <h6 class="des">Lorem ipsum dolor sit amet consectetur.</h6>
+            <button class="watchlist-btn">add to watchlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
